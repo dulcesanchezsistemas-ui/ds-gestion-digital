@@ -230,7 +230,7 @@ function App() {
       >
 
         <h2 className="text-5xl font-bold mb-6">
-          ¿Lista para digitalizar tu negocio?
+          ¿Listo para digitalizar tu negocio?
         </h2>
 
         <p className="text-gray-300 text-lg max-w-3xl mx-auto mb-10 leading-relaxed">
