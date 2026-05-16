@@ -3,258 +3,198 @@ import {
   FaBullhorn,
   FaCogs,
   FaWhatsapp,
+  FaArrowRight,
+  FaCheckCircle,
 } from "react-icons/fa";
 
 import logo from "./assets/logo.jpg";
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
+    <div className="min-h-screen bg-[#070B14] text-white overflow-hidden">
 
-      {/* WHATSAPP FLOTANTE */}
+      {/* FONDO DECORATIVO */}
+      <div className="fixed inset-0 -z-10">
+        <div className="absolute top-[-100px] left-[-100px] w-[350px] h-[350px] bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-[-120px] right-[-120px] w-[400px] h-[400px] bg-cyan-400/10 rounded-full blur-3xl"></div>
+      </div>
+
+      {/* WHATSAPP */}
       <a
-        href="https://wa.me/502XXXXXXXX"
+        href="https://wa.me/50230028070"
         target="_blank"
-        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl z-50 transition"
+        className="fixed bottom-6 right-6 bg-[#25D366] hover:scale-110 w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl z-50 transition"
       >
         <FaWhatsapp />
       </a>
 
       {/* NAVBAR */}
-      <nav className="flex items-center justify-between px-8 py-6 border-b border-slate-800">
-
+      <nav className="flex items-center justify-between px-8 md:px-16 py-6 border-b border-white/10 backdrop-blur-xl bg-[#070B14]/80 sticky top-0 z-40">
         <div className="flex items-center gap-4">
-
           <img
             src={logo}
             alt="DS Gestión Digital"
-            className="w-14 h-14 object-contain rounded-xl"
+            className="w-12 h-12 object-contain rounded-xl"
           />
 
-          <h2 className="text-2xl font-bold text-blue-400">
+          <h2 className="text-xl md:text-2xl font-semibold tracking-wide">
             DS Gestión Digital
           </h2>
-
         </div>
 
-        <div className="hidden md:flex gap-8 text-gray-300 font-medium">
-
-          <a href="#" className="hover:text-blue-400 transition">
-            Inicio
-          </a>
-
-          <a href="#servicios" className="hover:text-blue-400 transition">
-            Servicios
-          </a>
-
-          <a href="#proyectos" className="hover:text-blue-400 transition">
-            Proyectos
-          </a>
-
-          <a href="#contacto" className="hover:text-blue-400 transition">
-            Contacto
-          </a>
-
+        <div className="hidden md:flex gap-8 text-sm text-gray-300">
+          <a href="#" className="hover:text-white transition">Inicio</a>
+          <a href="#servicios" className="hover:text-white transition">Servicios</a>
+          <a href="#diferencia" className="hover:text-white transition">Diferencia</a>
+          <a href="#contacto" className="hover:text-white transition">Contacto</a>
         </div>
       </nav>
 
       {/* HERO */}
-      <section className="px-8 py-28 text-center">
+      <section className="px-8 md:px-16 py-28 md:py-36 text-center">
+        <div className="inline-block border border-white/10 bg-white/5 px-5 py-2 rounded-full text-sm text-gray-300 mb-8">
+          Tecnología estratégica para negocios en crecimiento
+        </div>
 
-        <p className="text-blue-400 font-semibold mb-5 uppercase tracking-widest">
-          Agencia tecnológica en Guatemala
-        </p>
-
-        <h1 className="text-5xl md:text-7xl font-extrabold leading-tight max-w-6xl mx-auto">
-          Transformamos negocios manuales en soluciones digitales inteligentes
+        <h1 className="text-4xl md:text-7xl font-bold leading-tight max-w-6xl mx-auto tracking-tight">
+          Digitalizamos tu negocio con soluciones modernas, simples y elegantes.
         </h1>
 
-        <p className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto mt-8 leading-relaxed">
-          Ayudamos a emprendedores, mini empresas y negocios tradicionales a
-          modernizar sus procesos mediante páginas web, automatización,
-          marketing digital y herramientas tecnológicas profesionales.
+        <p className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto mt-8 leading-relaxed">
+          En DS Gestión Digital ayudamos a emprendedores y empresas a dejar atrás
+          los procesos manuales mediante páginas web, automatización y presencia
+          digital profesional.
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-5 mt-12">
-
           <a
-            href="https://wa.me/502XXXXXXXX"
+            href="https://wa.me/50230028070"
             target="_blank"
-            className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-2xl font-semibold text-lg transition shadow-lg"
+            className="bg-white text-[#070B14] hover:bg-gray-200 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center gap-3"
           >
-            Solicitar cotización
+            Solicitar asesoría <FaArrowRight />
           </a>
 
           <a
             href="#servicios"
-            className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-950 px-8 py-4 rounded-2xl font-semibold text-lg transition"
+            className="border border-white/15 hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition"
           >
             Ver servicios
           </a>
-
         </div>
       </section>
 
       {/* SERVICIOS */}
-      <section
-        id="servicios"
-        className="px-8 py-24 bg-slate-900"
-      >
+      <section id="servicios" className="px-8 md:px-16 py-24">
+        <div className="text-center mb-16">
+          <p className="text-gray-400 uppercase tracking-[0.3em] text-sm mb-4">
+            Lo que hacemos
+          </p>
 
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-5">
-          Nuestros Servicios
-        </h2>
+          <h2 className="text-4xl md:text-5xl font-bold">
+            Servicios pensados para transformar
+          </h2>
+        </div>
 
-        <p className="text-gray-300 text-center max-w-3xl mx-auto mb-16 text-lg">
-          Ofrecemos soluciones tecnológicas modernas para ayudar a las empresas
-          a crecer de manera eficiente, profesional y digital.
-        </p>
+        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <Servicio
+            icon={<FaLaptopCode />}
+            title="Desarrollo Web"
+            text="Creamos sitios web profesionales, rápidos y adaptados a celulares para mostrar tu marca con confianza."
+          />
 
-        <div className="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+          <Servicio
+            icon={<FaCogs />}
+            title="Automatización"
+            text="Convertimos procesos manuales en flujos digitales más rápidos, ordenados y eficientes."
+          />
 
-          <div className="bg-slate-800 p-10 rounded-3xl hover:-translate-y-2 transition duration-300 shadow-xl">
-
-            <FaLaptopCode className="text-6xl text-blue-400 mb-8 mx-auto" />
-
-            <h3 className="text-2xl font-bold text-center mb-5">
-              Desarrollo Web
-            </h3>
-
-            <p className="text-gray-300 text-center leading-relaxed">
-              Creamos páginas web modernas, rápidas y adaptadas a celulares
-              para negocios, marcas personales y emprendimientos.
-            </p>
-
-          </div>
-
-          <div className="bg-slate-800 p-10 rounded-3xl hover:-translate-y-2 transition duration-300 shadow-xl">
-
-            <FaCogs className="text-6xl text-blue-400 mb-8 mx-auto" />
-
-            <h3 className="text-2xl font-bold text-center mb-5">
-              Automatización
-            </h3>
-
-            <p className="text-gray-300 text-center leading-relaxed">
-              Digitalizamos procesos manuales para ahorrar tiempo, mejorar la
-              productividad y optimizar la administración empresarial.
-            </p>
-
-          </div>
-
-          <div className="bg-slate-800 p-10 rounded-3xl hover:-translate-y-2 transition duration-300 shadow-xl">
-
-            <FaBullhorn className="text-6xl text-blue-400 mb-8 mx-auto" />
-
-            <h3 className="text-2xl font-bold text-center mb-5">
-              Marketing Digital
-            </h3>
-
-            <p className="text-gray-300 text-center leading-relaxed">
-              Diseñamos estrategias digitales modernas para redes sociales,
-              branding y crecimiento de negocios.
-            </p>
-
-          </div>
-
+          <Servicio
+            icon={<FaBullhorn />}
+            title="Marketing Digital"
+            text="Diseñamos estrategias visuales y digitales para mejorar tu presencia en redes y atraer clientes."
+          />
         </div>
       </section>
 
-      {/* PROYECTOS */}
-      <section
-        id="proyectos"
-        className="px-8 py-24"
-      >
+      {/* DIFERENCIA */}
+      <section id="diferencia" className="px-8 md:px-16 py-24 bg-white/[0.03]">
+        <div className="grid md:grid-cols-2 gap-16 max-w-7xl mx-auto items-center">
+          <div>
+            <p className="text-gray-400 uppercase tracking-[0.3em] text-sm mb-4">
+              Nuestra diferencia
+            </p>
 
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-5">
-          Proyectos Recientes
-        </h2>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+              No solo diseñamos. Creamos soluciones con propósito.
+            </h2>
 
-        <p className="text-gray-300 text-center max-w-3xl mx-auto mb-16 text-lg">
-          Algunos ejemplos de soluciones tecnológicas y digitales desarrolladas
-          para negocios y emprendimientos.
-        </p>
-
-        <div className="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
-
-          <div className="bg-slate-900 rounded-3xl overflow-hidden shadow-xl hover:-translate-y-2 transition">
-            <div className="h-56 bg-blue-500"></div>
-
-            <div className="p-8">
-              <h3 className="text-2xl font-bold mb-4">
-                Página Web Empresarial
-              </h3>
-
-              <p className="text-gray-300">
-                Desarrollo de sitio moderno para una empresa enfocada en
-                crecimiento digital y automatización.
-              </p>
-            </div>
+            <p className="text-gray-400 text-lg leading-relaxed">
+              Cada proyecto se construye con una visión clara: que tu negocio se
+              vea profesional, funcione mejor y pueda crecer en el mundo digital.
+            </p>
           </div>
 
-          <div className="bg-slate-900 rounded-3xl overflow-hidden shadow-xl hover:-translate-y-2 transition">
-            <div className="h-56 bg-purple-500"></div>
-
-            <div className="p-8">
-              <h3 className="text-2xl font-bold mb-4">
-                Sistema Administrativo
-              </h3>
-
-              <p className="text-gray-300">
-                Plataforma para gestión de clientes, ventas y procesos internos.
-              </p>
-            </div>
+          <div className="space-y-5">
+            <Detalle text="Diseño limpio, moderno y elegante." />
+            <Detalle text="Soluciones adaptadas a cada negocio." />
+            <Detalle text="Comunicación clara y atención personalizada." />
+            <Detalle text="Enfoque en resultados, no solo en apariencia." />
           </div>
-
-          <div className="bg-slate-900 rounded-3xl overflow-hidden shadow-xl hover:-translate-y-2 transition">
-            <div className="h-56 bg-green-500"></div>
-
-            <div className="p-8">
-              <h3 className="text-2xl font-bold mb-4">
-                Branding Digital
-              </h3>
-
-              <p className="text-gray-300">
-                Diseño visual y estrategia digital para redes sociales y marca.
-              </p>
-            </div>
-          </div>
-
         </div>
       </section>
 
       {/* CONTACTO */}
-      <section
-        id="contacto"
-        className="px-8 py-28 text-center bg-slate-900"
-      >
+      <section id="contacto" className="px-8 md:px-16 py-32 text-center">
+        <div className="max-w-4xl mx-auto bg-white/[0.04] border border-white/10 rounded-[2rem] p-10 md:p-16 shadow-2xl">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            Tu negocio puede verse más profesional desde hoy.
+          </h2>
 
-        <h2 className="text-5xl font-bold mb-6">
-          ¿Listo para digitalizar tu negocio?
-        </h2>
+          <p className="text-gray-400 text-lg mb-10 leading-relaxed">
+            Hablemos de tu idea y creemos una solución digital que represente la
+            esencia de tu marca.
+          </p>
 
-        <p className="text-gray-300 text-lg max-w-3xl mx-auto mb-10 leading-relaxed">
-          En DS Gestión Digital convertimos ideas en herramientas tecnológicas
-          modernas, funcionales y fáciles de usar.
-        </p>
-
-        <a
-          href="https://wa.me/50230028070"
-          target="_blank"
-          className="bg-blue-600 hover:bg-blue-700 px-10 py-5 rounded-2xl font-semibold text-lg transition shadow-lg inline-block"
-        >
-          Contactar por WhatsApp
-        </a>
-
+          <a
+            href="https://wa.me/50230028070"
+            target="_blank"
+            className="bg-white text-[#070B14] hover:bg-gray-200 px-10 py-5 rounded-full font-semibold inline-flex items-center gap-3 transition"
+          >
+            Contactar por WhatsApp <FaWhatsapp />
+          </a>
+        </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-slate-950 border-t border-slate-800 py-8 text-center text-gray-400">
-        © 2026 DS Gestión Digital — Todos los derechos reservados.
+      <footer className="border-t border-white/10 py-8 text-center text-gray-500 text-sm">
+        © 2026 DS Gestión Digital — Soluciones digitales inteligentes.
       </footer>
-
     </div>
-  )
+  );
 }
 
-export default App
+function Servicio({ icon, title, text }) {
+  return (
+    <div className="group bg-white/[0.04] border border-white/10 p-9 rounded-[2rem] hover:bg-white/[0.07] transition duration-300">
+      <div className="text-4xl text-gray-200 mb-8 group-hover:scale-110 transition">
+        {icon}
+      </div>
+
+      <h3 className="text-2xl font-semibold mb-4">{title}</h3>
+
+      <p className="text-gray-400 leading-relaxed">{text}</p>
+    </div>
+  );
+}
+
+function Detalle({ text }) {
+  return (
+    <div className="flex items-center gap-4 bg-white/[0.04] border border-white/10 p-5 rounded-2xl">
+      <FaCheckCircle className="text-gray-300" />
+      <p className="text-gray-300">{text}</p>
+    </div>
+  );
+}
+
+export default App;
